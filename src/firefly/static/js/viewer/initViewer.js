@@ -26,7 +26,7 @@ function connectViewerSocket(){
 
 		socketParams.socket.on('show_loader', function(msg) {
 			d3.select("#splashdivLoader").selectAll('svg').remove();
-			d3.select("#splashdiv5").text("Loading...");
+			d3.select("#splashdiv7").text("Loading...");
 			d3.select("#loader").style("display","visible");
 			viewerParams.loaded = false;
 			viewerParams.pauseAnimation = true;
@@ -1323,7 +1323,7 @@ function clearloading(){
 	console.log("loaded")
 	d3.select("#loader").style("display","none")
 	if (viewerParams.local){
-		d3.select("#splashdiv5").text("Click to begin.");
+		d3.select("#splashdiv7").text("Click to begin.");
 	} else {
 		showSplash(false);
 	}
